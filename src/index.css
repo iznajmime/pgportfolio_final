@@ -62,6 +62,14 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: 'Montserrat', sans-serif;
+    /* Ensure body doesn't have its own background that could override the image */
+    background: transparent;
+  }
+  
+  /* Ensure the root element allows the background to show through */
+  #root {
+    background: transparent;
+    min-height: 100vh;
   }
 }
 
