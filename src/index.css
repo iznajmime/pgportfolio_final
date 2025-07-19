@@ -62,18 +62,20 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: 'Montserrat', sans-serif;
-    /* Ensure body doesn't have its own background that could override the image */
-    background: transparent;
   }
   
-  /* Ensure the root element allows the background to show through */
   #root {
-    background: transparent;
     min-height: 100vh;
   }
 }
 
 @layer components {
+  .bg-gradient-background {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
   .glass-card {
     position: relative;
     overflow: hidden;

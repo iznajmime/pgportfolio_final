@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useNavigate, Link } from 'react-router-dom';
 import { LineChart } from 'lucide-react';
-import backgroundImage from '@/assets/background.png';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -23,15 +22,7 @@ export default function Login() {
   };
 
   return (
-    <div 
-      className="flex items-center justify-center min-h-screen text-foreground"
-      style={{
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
-      }}
-    >
+    <div className="flex items-center justify-center min-h-screen text-foreground bg-gradient-background">
       <div className="w-full max-w-md p-8 space-y-8 bg-card rounded-lg shadow-lg border border-border">
         <div className="text-center">
           <LineChart className="mx-auto h-12 w-12 text-primary" />

@@ -2,7 +2,6 @@ import { ReactNode } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { UserNav } from './UserNav';
 import { cn } from '@/lib/utils';
-import backgroundImage from '@/assets/background.png';
 
 const navItems = [
   { href: '/dashboard', label: 'Dashboard' },
@@ -14,20 +13,7 @@ export function AppLayout({ children }: { children: ReactNode }) {
   const location = useLocation();
 
   return (
-    <div className="min-h-screen w-full relative">
-      {/* Background Image */}
-      <div 
-        className="fixed inset-0 z-0"
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      />
-      
-      {/* Content Overlay */}
-      <div className="relative z-10 min-h-screen">
+    <div className="min-h-screen w-full relative bg-gradient-background">
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-black/30 backdrop-blur-lg">
         <div className="container flex h-16 items-center">
           {/* Corrected Logo */}
@@ -63,7 +49,6 @@ export function AppLayout({ children }: { children: ReactNode }) {
       <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-8">
         {children}
       </main>
-      </div>
     </div>
   );
 }
